@@ -1,0 +1,144 @@
+html {
+    box-sizing: border-box;
+}
+
+*, * :before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kavivanar', cursive;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #A51F10;
+    margin: 0;
+}
+
+a {
+    color: #DA0090;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.wrapper {
+    width: 80%; 
+    margin: 0 auto; /* This centers it on the page*/
+    border: 5px solid rgb(0, 94, 255); /* This we will delete later.*/
+}
+
+.posted {
+    font-size:  0.8rem;
+    color: #89A611;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; /* it will give space between two boxes*/
+
+}
+
+.leftheader {
+    flex-basis: 40%;
+    border: 3px dotted green;
+    text-align: right; /*move image to right*/
+    padding-right: 0.5rem;
+
+}
+
+.rightheader {
+    flex-basis: 60%;
+    border: 3px dotted red;
+    margin-top: 3.75rem; /*this will push it down from the top*/
+    padding-left: 0.5rem;
+}
+
+.rightheader h1 {
+    margin: 0; /*turn off the margin gap.*/
+    color: #da0090;
+    font-size: 3rem;
+}
+
+.rightheader p {
+    margin-top: -0.5rem;
+    border: 3px dotted blue;
+}
+
+nav {
+    border-bottom: 1px solid #a61f11 ;
+    border-top: 1px solid #da0090;
+}
+
+nav ul {
+    list-style-type: none; /*remove the bullets*/
+    border: 3px dotted green;
+    margin:0;   /* we need to do these two for every nav bar*/
+    padding: 0;
+    text-align: center; /*centers the ul */
+
+}
+
+nav li {
+    display: inline-block; /*this makes them horizontal.*/
+}
+
+nav a{
+    text-decoration: none; /*turn off the underlines*/
+    color: #73352E;
+    display: block; /*so the links will be all over the line*/
+    padding: 0.5rem 1rem; /* 0.5 top and bottom 1 left and right*/
+}
+
+nav a:hover {
+    background-color: black;
+    color:#84de37 ;
+    text-decoration: none; /*turn off the underline */
+
+}
+article {
+    margin: 2rem 0;
+    border: 3px dotted red;
+}
+
+article img {
+    float: left;
+    margin: 0 1rem 1rem 0; 
+    /* border: 3px dotted green; */
+    border-radius: 1rem;
+}
+/* we have float we need to clear it */
+article::after { 
+    content: "";
+    display: table;
+    clear: both;
+}
+section {
+    border-bottom: 1px solid #da0090;
+    margin-bottom: 0.3rem; /* seperates two lines*/
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #a61f11; /*borders on top of each other*/
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; 
+    /* this part is important. last for bullets */
+}
+ footer li {
+    display: inline-block; /* this puts them next to each other on one line flexbox can be also used. bosluklar olur arada*/
+ }
